@@ -35,18 +35,16 @@ task :upload => [:environment] do
 
   split_ratings = ratings.split("\n").map! do |rating|
     rating.split('::')
-  end
+  end.uniq
 
   recoms = []
 
   split_ratings.each do |rating|
-    item_id = rating[0]
-    user_id  = rating[1]
-    rate     = rating[2]
-    time     = rating[3]
-    r = AddRating.new(user_id, item_id, rate, timestamp=time, 'cascadeCreate' => true)
-    client.send(r)
-    puts "Movie:#{movie_id} with rating of #{rate} added"
+    user_id  = rating[0]
+    item_id  = rating[1]
+    rate     = ((rating[2].to_i - 3) / 2)
+
+    r = AddRating.new(user_id, item_id, rate, 'cascadeCreate' => true)
     recoms.push(r)
   end
 
