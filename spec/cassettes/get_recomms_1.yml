@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://rapi.recombee.com/movielens/items/1/recomms/?hmac_sign=94abf4abc49a771bc91ef96ad5ef25e68674e152&hmac_timestamp=1516578927
+    body:
+      encoding: UTF-8
+      string: '{"count":5}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - recombee-ruby-api-client/1.6.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 21 Jan 2018 23:55:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '39'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '["3550", "3114", "260", "1198", "1196"]'
+    http_version: 
+  recorded_at: Sun, 21 Jan 2018 23:55:27 GMT
+recorded_with: VCR 4.0.0

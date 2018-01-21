@@ -42,8 +42,6 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'shoulda-matchers'
-  gem 'vcr'
-  gem 'webmock'
   gem 'database_cleaner'
 end
 

@@ -15,5 +15,5 @@ class RecombeeService
   end
 
   private
-    attr_reader :movie_id
+    attr_reader :movie_id, :client
 end
