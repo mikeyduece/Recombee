@@ -6,28 +6,28 @@ task :upload => [:environment] do
 
   client = RecombeeClient.new('movielens', ENV['RECOMBEE_API'])
 
-  # movies = File.read('./db/movie_lens/movies.dat')
-  #
-  # movies.encode!("Windows-1252", invalid: :replace, undef: :replace)
-  #
-  # split_movies = movies.split("\n").map! do |movie|
-  #   movie.split('::')
-  # end
-  #
-  # rec_movies = []
-  #
-  # split_movies.each do |movie|
-  #   id    = movie[0]
-  #   r = AddItem.new(id)
-  #   rec_movies.push(r)
-  # end
-  #
-  # begin
-  #   client.send(Batch.new(rec_movies))
-  #   puts 'Movie batch sent.'
-  # rescue APIError => e
-  #   puts e
-  # end
+  movies = File.read('./db/movie_lens/movies.dat')
+
+  movies.encode!("Windows-1252", invalid: :replace, undef: :replace)
+
+  split_movies = movies.split("\n").map! do |movie|
+    movie.split('::')
+  end
+
+  rec_movies = []
+
+  split_movies.each do |movie|
+    id    = movie[0]
+    r = AddItem.new(id)
+    rec_movies.push(r)
+  end
+
+  begin
+    client.send(Batch.new(rec_movies))
+    puts 'Movie batch sent.'
+  rescue APIError => e
+    puts e
+  end
 
   ratings = File.read('./db/movie_lens/ratings.dat')
 

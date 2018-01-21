@@ -30,7 +30,7 @@ gem 'redis', '~> 3.0'
 gem 'figaro'
 gem 'faraday'
 gem 'recombee_api_client'
-
+gem 'activerecord-import'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
