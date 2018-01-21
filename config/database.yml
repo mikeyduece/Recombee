@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: heft
+  username: heft
+  password: <%= ENV['DROPLET_PW'] %>
   host: 159.89.80.118
 
   # The specified database role being used to connect to postgres.
