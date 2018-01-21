@@ -1,2 +1,2 @@
-class Rating < ApplicationRecord
+class Rating
 end
