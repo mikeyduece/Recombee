@@ -14,6 +14,15 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+def movie_1_recs
+  movie_1 = Movie.create(id: 3550, title: 'Hunger, The (1983)', genre: 'Horror')
+  movie_2 = Movie.create(id: 3114, title: 'Toy Story 2 (1999)', genre: "Animation|Children's|COmedy'")
+  movie_3 = Movie.create(id: 260, title: 'Star Wars: Episode IV - A New Hope (1997)', genre: "Action|Adventure|Sci-Fi")
+  movie_4 = Movie.create(id: 1198, title: 'Raiders of the Lost Ark (1981)', genre: "Action|Adventure")
+  movie_5 = Movie.create(id: 1196, title: 'Star Wars: Episode V - The Empire Strikes Back (1980)', genre: "Action|Adventure|Drama|Sci-Fi|War")
+  return [movie_1, movie_2, movie_3, movie_4, movie_5]
+end
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
