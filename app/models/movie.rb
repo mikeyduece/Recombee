@@ -3,7 +3,6 @@ class Movie < ApplicationRecord
 
   def self.get_recs(movie_id)
     recs = RecommendationService.get_recomms(movie_id)
-    require 'pry'; binding.pry
     find(recs)
   end
 end
