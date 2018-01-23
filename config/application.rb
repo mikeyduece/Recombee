@@ -33,7 +33,7 @@ module Recombee
     config.generators.system_tests = nil
     config.action_dispatch.default_headers = {
       'Access-Control-Allow-Origin': 'http://localhost:3001, https://localhost:3001',
-      'Access-Control-Request-Method': %w{GET POST PUT PATCH DELETE UPDATE OPTIONS}.join(","),
+      'Access-Control-Request-Method': %w{GET OPTIONS}.join(","),
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     }
