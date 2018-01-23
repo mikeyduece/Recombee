@@ -29,6 +29,7 @@ gem 'redis-namespace', '~> 1.6.0'
 gem 'redis-rails'
 gem 'redis-rack-cache'
 gem 'mock_redis'
+gem 'pager_api'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
