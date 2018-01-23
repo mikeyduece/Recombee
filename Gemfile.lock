@@ -103,6 +103,7 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    pager_api (0.2.3)
     pg (0.21.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -240,6 +241,7 @@ DEPENDENCIES
   launchy
   listen (>= 3.0.5, < 3.2)
   mock_redis
+  pager_api
   pg (~> 0.18)
   pry-rails
   puma (~> 3.7)
