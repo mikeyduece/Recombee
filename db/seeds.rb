@@ -1,7 +1,6 @@
 
 
 Movie.delete_all
-Rating.delete_all
 
 movie_batch = []
 
