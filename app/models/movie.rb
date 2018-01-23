@@ -8,7 +8,7 @@ class Movie < ApplicationRecord
       $REDIS.set('recs', recs)
       $REDIS.expire('recs', 3.hour.to_i)
     end
-    find(JSON.parse(recs))
+    find(JSON.parse(recs.to_s))
   end
 
 end
