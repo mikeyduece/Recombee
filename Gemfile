@@ -25,6 +25,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'
+gem 'redis-namespace', '~> 1.6.0'
+gem 'redis-rails'
+gem 'redis-rack-cache'
+gem 'mock_redis'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
