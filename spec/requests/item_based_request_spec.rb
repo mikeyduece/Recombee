@@ -40,19 +40,6 @@ describe 'Recombee API' do
       movie_9  = Movie.create(id: 260, title: 'Star Wars: Episode IV - A New Hope (1997)', genre: "Action|Adventure|Sci-Fi")
       movie_10 = Movie.create(id: 1198, title: 'Raiders of the Lost Ark (1981)', genre: "Action|Adventure")
       movie_11 = Movie.create(id: 1196, title: 'Star Wars: Episode V - The Empire Strikes Back (1980)', genre: "Action|Adventure|Drama|Sci-Fi|War")
-      movie_rec = {
-        "id" => 2997,
-        "title" => 'Being John Malkovich (1999)',
-        "genre" => 'Comedy',
-        "created_at" => "2018-01-22T23:56:18.182Z",
-        "updated_at" => "2018-01-22T23:56:18.182Z"
-      }
-      not_in_rec = {
-        "id" => 1196,
-        "title" => 'Star Wars: Episode V - The Empire Strikes Back (1980)',
-        "genre" => "Action|Adventure|Drama|Sci-Fi|War"
-      }
-
 
       get "/api/v1/#{movie.id}/recomms"
 
@@ -60,6 +47,9 @@ describe 'Recombee API' do
       recs = JSON.parse(response.body)
 
       expect(recs.count).to eq(5)
+
+      expect(recs.any? {|rec| rec['id'] == 2997}).to be true
+      expect(recs.any? {|rec| rec['id'] == 1196}).to_not be true
     end
   end
 end
