@@ -35,6 +35,9 @@ gem 'figaro'
 gem 'faraday'
 gem 'recombee_api_client'
 gem 'activerecord-import'
+gem 'rack-cors', :require => 'rack/cors'
+# gem 'simplecov'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
