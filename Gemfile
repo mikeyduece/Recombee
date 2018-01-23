@@ -47,7 +47,6 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
-  gem 'rspec-json_expectations'
 end
 
 group :development do
