@@ -34,7 +34,7 @@ module Recombee
     config.action_dispatch.default_headers = {
       'Access-Control-Allow-Origin': 'http://localhost:3001, https://localhost:3001',
       'Access-Control-Request-Method': %w{GET OPTIONS}.join(","),
-      'Access-Control-Expose-Headers': 'Link',
+      'Access-Control-Expose-Headers': ['Link'],
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     }
