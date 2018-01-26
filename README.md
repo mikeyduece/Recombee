@@ -20,6 +20,6 @@ This Rails api serves up JSON for the React frontend. Available endpoints are as
 
 `/api/v1/:movie_id/recomms`
 
-    >Return list of 5 movies recommended for the movie id. The list is provided by Recombee's cloud recommendation service.        The list is populated by Recombee's service which takes into consideration, ratings for each movie.
+    >Return list of 5 movies recommended for the movie id. The list is provided by Recombee's cloud recommendation service. The list is populated by Recombee's service which takes into consideration, ratings for each movie.
     
 This application uses Redis to cache the recommendations returning for 3 hours to lessen the number of times the Recombee api is hit.
